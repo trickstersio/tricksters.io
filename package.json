@@ -1,7 +1,16 @@
 {
   "name": "tricksters.io",
+  "description": "Site and blog of tricksters team.",
   "version": "1.0.0",
+  "author": "Dmitry Toropchin",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trickstersio/tricksters.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trickstersio/tricksters.io.git"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build",
