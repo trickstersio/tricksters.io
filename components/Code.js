@@ -5,30 +5,37 @@ import { accentColor } from '../lib/colors';
 import { monospaceFont } from '../lib/fonts';
 import media from '../lib/media';
 
-const CodeBlock = styled.pre`
+const CodeWrapper = styled.div`
   box-sizing: border-box;
   margin: 0 1.5em 2em 1.5em;
-  padding: 0 1.5rem;
 
-  background-color: #F7F7F7;
+  ${media.tablet`
+    margin: 0 auto 2rem auto;
+    width: 100%;
+  `}
 
-  border-left: 1px solid ${accentColor};
+  ${media.desktop`
+    margin: 0 auto 2rem auto;
+    width: 100%;
+  `}
+`;
+
+const CodeBlock = styled.pre`
+  box-sizing: border-box;
+  padding: 1.5rem;
+  width: 100%;
 
   font-family: ${monospaceFont};
   font-size: 0.9rem;
 
-  overflow: scroll;
+  background-color: #F7F7F7;
+  border-left: 1px solid ${accentColor};
 
-  ${media.tablet`
-    margin: 0 auto 2em auto;
-  `}
-
-  ${media.desktop`
-    margin: 0 auto 2em auto;
-  `}
+  overflow-y: hidden;
 `;
 
-const Code = ({ children }) => <CodeBlock><code>{children}</code></CodeBlock>;
+const Code = ({ children }) =>
+  <CodeWrapper><CodeBlock><code>{children}</code></CodeBlock></CodeWrapper>;
 
 Code.propTypes = {
   children: PropTypes.node,

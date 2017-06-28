@@ -13,10 +13,12 @@ const QuoteBlock = styled.div`
 
   ${media.tablet`
     margin: 0 auto 2em auto;
+    width: 100%;
   `}
 
   ${media.desktop`
     margin: 0 auto 2em auto;
+    width: 100%;
   `}
 `;
 
@@ -36,21 +38,21 @@ const QuoteAuthorPosition = styled.div`
   opacity: 0.5;
 `;
 
-const Quote = ({ text, author, position }) =>
+const Quote = ({ author, position, children }) =>
   (<QuoteBlock>
-    <QuoteText>{text}</QuoteText>
+    <QuoteText>{children}</QuoteText>
     <QuoteAuthorName>{author}</QuoteAuthorName>
     <QuoteAuthorPosition>{position}</QuoteAuthorPosition>
   </QuoteBlock>);
 
 Quote.propTypes = {
-  text: PropTypes.string,
+  children: PropTypes.node,
   author: PropTypes.string,
   position: PropTypes.string,
 };
 
 Quote.defaultProps = {
-  text: '',
+  children: null,
   author: '',
   position: '',
 };

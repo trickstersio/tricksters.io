@@ -11,117 +11,113 @@ import Quote from '../components/Quote';
 import Text from '../components/Text';
 import { UList, UListItem, OList, OListItem } from '../components/List';
 
-export default () =>
-  (<PostWrapper>
-    <Post>
-      <PostHeader
-        date="14 may 2017"
-        title="After building my first React Native app, I’m now convinced it’s the future."
-        author="Sergey Tsvetkov"
-        position="developer"
-      />
-      <PostContent>
-        <Paragraph>
-          After a few weeks of playing around with React Native, I just came
-          away
-          with my first real mobile app. It’s fairly simple, but it only took me
-          a
-          few days to build and I had a blast doing it. I created a mobile app
-          for
-          my favorite food blog, Smitten Kitchen. The app allows users to search
-          through a database of over 1,000 recipes, and concisely view the
-          necessary ingredients and directions for each one. Users can also
-          bookmark recipes and easily{' '}
-          <Link href="https://google.com">share them with a friend</Link>.
-        </Paragraph>
+export default () => {
+  const codeBlock = `const PostHeaderComponent = (props) => {
+  const { date, title, photo, author, position } = props;
 
-        <Code>
-          {`
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-const Button = (props) => {
-  const { buttonStyle, textStyle } = styles;
   return (
-    <TouchableOpacity style={buttonStyle} onPress={props.onPress}>
-      <Text style={textStyle}>
-        {props.children}
-      </Text>
-    </TouchableOpacity>
+    <PostHeader>
+      <PostDate>{date}</PostDate>
+      <PostTitle>{title}</PostTitle>
+      <PostAuthor src={photo} author={author} position={position} />
+    </PostHeader>
+  );
+};`;
+
+  return (
+    <PostWrapper>
+      <Post>
+        <PostHeader date="post date" title="Post Title" author="Post Author" position="position" />
+        <PostContent>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam nibh. Nunc varius
+            facilisis
+            eros. Sed erat. In in velit quis arcu ornare laoreet. Curabitur adipiscing luctus massa.
+            Integer ut purus ac augue commodo commodo. Nunc nec mi eu justo tempor consectetuer.
+            Etiam
+            vitae nisl. In dignissim lacus ut ante. Cras elit lectus, bibendum a, adipiscing vitae,
+            commodo et, dui. Ut tincidunt tortor. Donec nonummy, enim in lacinia pulvinar, velit
+            tellus scelerisque augue, ac posuere libero urna eget neque. Cras ipsum. Vestibulum
+            pretium, lectus nec venenatis volutpat, purus lectus ultrices risus, a condimentum risus
+            mi et quam. Pellentesque auctor fringilla neque. Duis eu massa ut lorem iaculis
+            vestibulum. Maecenas facilisis elit sed justo.{' '}
+            <Link href="https://google.com">Quisque volutpat malesuada velit</Link>.
+          </Paragraph>
+
+          <Heading>Post Content Heading</Heading>
+
+          <Paragraph>
+            Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida
+            auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit
+            convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur
+            molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci.
+            Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere
+            pretium.
+          </Paragraph>
+
+          <Quote author="Quite Author" position="position">
+            Nulla mauris odio, vehicula in, condimentum sit amet, tempus id, metus. Donec at nisi
+            sit amet felis blandit posuere. Aliquam erat volutpat.
+          </Quote>
+
+          <Quote author="Quite Author" position="position">
+            Aliquam erat volutpat.
+          </Quote>
+
+          <Paragraph>
+            Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida
+            auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit
+            convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur
+            molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci.
+            Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere
+            pretium.
+          </Paragraph>
+
+          <Code>{codeBlock}</Code>
+
+          <Code>{'const x = 42;'}</Code>
+
+          <Paragraph>
+            Nunc at velit quis lectus nonummy eleifend. Curabitur eros. Aenean ligula dolor, gravida
+            auctor, auctor et, suscipit in, erat. Sed malesuada, enim ut congue pharetra, massa elit
+            convallis pede, ornare scelerisque libero neque ut neque. In at libero. Curabitur
+            molestie. Sed vel neque. Proin et dolor ac ipsum elementum malesuada. Praesent id orci.
+            Donec hendrerit. In hac habitasse platea dictumst. Aenean sit amet arcu a turpis posuere
+            pretium.
+          </Paragraph>
+
+          <Image
+            src="http://rcysl.com/wp-content/uploads/2017/02/Pics-Of-Nature-1920x1080.jpg"
+            caption="Cras lobortis orci in quam porttitor cursus"
+          />
+
+          <Text>
+            Aenean dignissim. Curabitur facilisis sem at nisi laoreet placerat. Duis sed ipsum ac
+            nibh mattis feugiat:
+          </Text>
+
+          <UList>
+            <UListItem>
+              Proin sed purus. Vivamus lectus ipsum, rhoncus sed, scelerisque sit amet, ultrices in,
+              dolor. Aliquam vel magna non nunc ornare bibendum. Sed libero.
+            </UListItem>
+            <UListItem>Maecenas at est. </UListItem>
+          </UList>
+
+          <Text>
+            Aenean dignissim. Curabitur facilisis sem at nisi laoreet placerat. Duis sed ipsum ac
+            nibh mattis feugiat:
+          </Text>
+
+          <OList>
+            <OListItem>
+              Proin sed purus. Vivamus lectus ipsum, rhoncus sed, scelerisque sit amet, ultrices in,
+              dolor. Aliquam vel magna non nunc ornare bibendum. Sed libero.
+            </OListItem>
+            <OListItem>Maecenas at est. </OListItem>
+          </OList>
+        </PostContent>
+      </Post>
+    </PostWrapper>
   );
 };
-const styles = StyleSheet.create({
-  textStyle: {
-    alignSelf: 'center',
-    color: '#6B7794',
-    fontSize: 16,
-    fontWeight: '600',
-    paddingTop: 10,
-    paddingBottom: 10
-  },
-buttonStyle: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-}
-`}
-        </Code>
-
-        <Paragraph>
-          I’m still waiting for permission from the blog to publish this app,
-          but
-          you can check out all of the code here. Note that the url for my API
-          has
-          been stubbed for the time being out of respect for Smitten Kitchen.
-        </Paragraph>
-
-        <Heading>React Native isn’t going away any time soon</Heading>
-
-        <Paragraph>
-          A common reservation among developers is that they don’t want to
-          invest
-          the time to learn a new technology if there’s a strong chance it will
-          become obsolete in the near future. Even from my relatively minimal
-          experience with React Native, I’ve found it to be an enormously
-          powerful
-          tool. I am confident it will be used in the years to come.
-        </Paragraph>
-
-        <Quote
-          text="The app allows users to search through a database of over 1,000 recipes, and concisely view the necessary ingredients and directions for each one."
-          author="Elon Mask"
-          position="CEO Tesla"
-        />
-
-        <Image
-          src="http://rcysl.com/wp-content/uploads/2017/02/Pics-Of-Nature-1920x1080.jpg"
-          caption="After a few weeks of playing around with React Native, I just came away with my first real mobile"
-        />
-
-        <Text>
-          After a few weeks of playing around with React Native, I just came:
-        </Text>
-
-        <UList>
-          <UListItem>
-            After a few weeks of playing asdk qjqwje hajhkf hahsflq ahshfasfas
-          </UListItem>
-          <UListItem>After a few weeks of playing</UListItem>
-        </UList>
-
-        <Text>
-          After a few weeks of playing around with React Native, I just came:
-        </Text>
-
-        <OList>
-          <OListItem>
-            After a few weeks of playing asdk qjqwje hajhkf hahsflq ahshfasfas
-          </OListItem>
-          <OListItem>After a few weeks of playing</OListItem>
-        </OList>
-
-        <Heading>Heading</Heading>
-        <Paragraph>paragraph</Paragraph>
-        <Text>text</Text>
-      </PostContent>
-    </Post>
-  </PostWrapper>);
