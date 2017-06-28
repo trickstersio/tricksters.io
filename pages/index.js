@@ -6,6 +6,7 @@ import Heading from '../components/Heading';
 import Image from '../components/Image';
 import Link from '../components/Link';
 import Paragraph from '../components/Paragraph';
+import Code from '../components/Code';
 import Quote from '../components/Quote';
 import Text from '../components/Text';
 import { UList, UListItem, OList, OListItem } from '../components/List';
@@ -33,6 +34,37 @@ export default () =>
           bookmark recipes and easily{' '}
           <Link href="https://google.com">share them with a friend</Link>.
         </Paragraph>
+
+        <Code>
+          {`
+import React from 'react';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+const Button = (props) => {
+  const { buttonStyle, textStyle } = styles;
+  return (
+    <TouchableOpacity style={buttonStyle} onPress={props.onPress}>
+      <Text style={textStyle}>
+        {props.children}
+      </Text>
+    </TouchableOpacity>
+  );
+};
+const styles = StyleSheet.create({
+  textStyle: {
+    alignSelf: 'center',
+    color: '#6B7794',
+    fontSize: 16,
+    fontWeight: '600',
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+buttonStyle: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+}
+`}
+        </Code>
 
         <Paragraph>
           I’m still waiting for permission from the blog to publish this app,
