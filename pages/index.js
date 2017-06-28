@@ -16,6 +16,8 @@ export default () =>
       <PostHeader
         date="14 may 2017"
         title="After building my first React Native app, I’m now convinced it’s the future."
+        author="Sergey Tsvetkov"
+        position="developer"
       />
       <PostContent>
         <Paragraph>

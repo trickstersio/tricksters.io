@@ -11,7 +11,7 @@ const PostTitle = styled.h1`
   box-sizing: border-box;
   text-align: center;
   padding: 0;
-  margin: 1em 0;
+  margin: 0.5rem 0;
 
   ${media.tablet`
     font-size: 2.3rem;

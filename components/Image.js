@@ -1,23 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Text from './Text';
 
-const Figure = styled.figure`
-  display: block;
-  margin: 0 auto 2em auto;
+const Figure = styled.div`
+  margin: 0 0 1em 0;
   width: 100%;
 `;
 
-const FigureCaption = Text.withComponent('figcaption').extend`
+const FigureCaption = styled.span`
+  display: block;
   font-size: 0.8rem;
   opacity: 0.5;
+  padding: 1em 1.5rem;
   text-align: center;
 `;
 
 const Image = styled.img`
+  display: block;
   max-width: 100%;
   height: auto;
+  margin: auto;
 `;
 
 const ImageComponent = ({ src, caption }) =>

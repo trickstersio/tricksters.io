@@ -10,7 +10,7 @@ const PostDate = styled.div`
   text-align: center;
   text-transform: uppercase;
   padding: 0;
-  margin: 0.8em 0;
+  margin: 0.5rem 0;
   width: 100%;
 `;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { accentColor } from '../lib/colors';
-import { bodyFont, headingFont } from '../lib/fonts';
+import { headingFont } from '../lib/fonts';
 import media from '../lib/media';
 
 const QuoteBlock = styled.div`
@@ -28,12 +28,10 @@ const QuoteText = styled.div`
 `;
 
 const QuoteAuthorName = styled.div`
-  font-family: ${bodyFont};
   font-size: 0.9rem;
 `;
 
 const QuoteAuthorPosition = styled.div`
-  font-family: ${bodyFont};
   font-size: 0.8rem;
   opacity: 0.5;
 `;
