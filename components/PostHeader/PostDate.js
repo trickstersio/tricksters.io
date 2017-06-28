@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { bodyFont } from '../../lib/fonts.js';
+import { bodyFont } from '../../lib/fonts';
 import { textColor } from '../../lib/colors';
 
 const PostDate = styled.div`

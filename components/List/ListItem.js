@@ -41,8 +41,16 @@ UListItem.propTypes = {
   children: PropTypes.node,
 };
 
+UListItem.defaultProps = {
+  children: null,
+};
+
 OListItem.propTypes = {
   children: PropTypes.node,
+};
+
+OListItem.defaultProps = {
+  children: null,
 };
 
 export { UListItem, OListItem };

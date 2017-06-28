@@ -1,3 +1,4 @@
+import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
@@ -15,13 +16,10 @@ export default class MyDocument extends Document {
     const main = sheet.collectStyles(<Main />);
     const styleTags = sheet.getStyleElement();
     return (
-      <html>
+      <html lang="en">
         <Head>
-          <meta charset="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <link
             href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|PT+Mono|Roboto"
             rel="stylesheet"

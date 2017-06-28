@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { headingFont } from '../lib/fonts';
 import { textColor } from '../lib/colors';
 import media from '../lib/media';

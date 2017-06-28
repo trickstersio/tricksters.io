@@ -20,10 +20,10 @@ const PostHeader = styled.div`
 `;
 
 const PostHeaderComponent = ({ date, title }) =>
-  <PostHeader>
+  (<PostHeader>
     <PostDate>{date}</PostDate>
     <PostTitle>{title}</PostTitle>
-  </PostHeader>;
+  </PostHeader>);
 
 PostHeaderComponent.propTypes = {
   date: PropTypes.string.isRequired,
