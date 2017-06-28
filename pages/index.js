@@ -7,8 +7,7 @@ import Image from '../components/Image';
 import Link from '../components/Link';
 import Paragraph from '../components/Paragraph';
 import Text from '../components/Text';
-import { UList, UListItem } from '../components/UList';
-import { OList, OListItem } from '../components/OList';
+import { UList, UListItem, OList, OListItem } from '../components/List';
 
 export default () =>
   <PostWrapper>
