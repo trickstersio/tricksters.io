@@ -89,6 +89,9 @@ export default class MyDocument extends Document {
           />
 
           <style dangerouslySetInnerHTML={{ __html: globalStyles }} />
+
+          <link rel="stylesheet" href="static/code-highlight.css" />
+
           {styleTags}
         </Head>
         <body>
