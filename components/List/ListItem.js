@@ -15,13 +15,13 @@ const ListItem = styled.li`
   }
 `;
 
-const UListItemStyle = ListItem.extend`
+const UListItemStyle = styled(ListItem)`
   &::before {
     content: '•';
   }
 `;
 
-const OListItemStyle = ListItem.extend`
+const OListItemStyle = styled(ListItem)`
   counter-increment: list-item-counter;
 
   &::before {
