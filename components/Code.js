@@ -12,12 +12,10 @@ const CodeWrapper = styled.div`
   ${media.tablet`
     margin: 0 auto 2rem auto;
     width: 100%;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     margin: 0 auto 2rem auto;
     width: 100%;
-  `}
+  `};
 `;
 
 const CodeBlock = styled.pre`
@@ -28,14 +26,20 @@ const CodeBlock = styled.pre`
   font-family: ${monospaceFont};
   font-size: 0.9rem;
 
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-left: 1px solid ${accentColor};
 
   overflow-y: hidden;
 `;
 
 const Code = ({ children }) =>
-  <CodeWrapper><CodeBlock><code>{children}</code></CodeBlock></CodeWrapper>;
+  (<CodeWrapper>
+    <CodeBlock>
+      <code>
+        {children}
+      </code>
+    </CodeBlock>
+  </CodeWrapper>);
 
 Code.propTypes = {
   children: PropTypes.node,

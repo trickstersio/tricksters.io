@@ -14,11 +14,9 @@ const PostContent = styled.div`
 
   ${media.tablet`
     max-width: 620px;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     max-width: 620px;
-  `}
+  `};
 `;
 
 export default PostContent;

@@ -25,13 +25,9 @@ const PostAuthorPhoto = styled.img`
   height: 100%;
 `;
 
-const PostAuthorCredentials = styled.div`
-  flex-grow: 1;
-`;
+const PostAuthorCredentials = styled.div`flex-grow: 1;`;
 
-const PostAuthorName = styled.div`
-  font-size: 0.9rem;
-`;
+const PostAuthorName = styled.div`font-size: 0.9rem;`;
 
 const PostAuthorPosition = styled.div`
   font-size: 0.8rem;
@@ -44,8 +40,12 @@ const PostAuthor = ({ src, author, position }) =>
       <PostAuthorPhoto src={src} />
     </PostAuthorPhotoWrapper>
     <PostAuthorCredentials>
-      <PostAuthorName>{author}</PostAuthorName>
-      <PostAuthorPosition>{position}</PostAuthorPosition>
+      <PostAuthorName>
+        {author}
+      </PostAuthorName>
+      <PostAuthorPosition>
+        {position}
+      </PostAuthorPosition>
     </PostAuthorCredentials>
   </PostAuthorBlock>);
 

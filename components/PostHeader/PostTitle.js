@@ -16,11 +16,9 @@ const PostTitle = styled.h1`
 
   ${media.tablet`
     font-size: 2.3rem;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     font-size: 2.3rem;
-  `}
+  `};
 `;
 
 export default PostTitle;

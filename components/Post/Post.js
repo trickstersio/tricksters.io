@@ -15,12 +15,10 @@ const Post = styled.div`
   ${media.tablet`
     max-width: 768px;
     padding: 2em 0;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     max-width: 768px;
     padding: 2em 0;
-  `}
+  `};
 `;
 
 export default Post;

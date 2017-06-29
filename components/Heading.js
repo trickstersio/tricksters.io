@@ -15,11 +15,9 @@ const Heading = styled.h2`
 
   ${media.tablet`
     font-size: 1.3rem;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     font-size: 1.3rem;
-  `}
+  `};
 `;
 
 export default Heading;

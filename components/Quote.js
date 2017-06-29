@@ -14,12 +14,10 @@ const QuoteBlock = styled.div`
   ${media.tablet`
     margin: 0 auto 2em auto;
     width: 100%;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     margin: 0 auto 2em auto;
     width: 100%;
-  `}
+  `};
 `;
 
 const QuoteText = styled.div`
@@ -29,9 +27,7 @@ const QuoteText = styled.div`
   font-style: italic;
 `;
 
-const QuoteAuthorName = styled.div`
-  font-size: 0.9rem;
-`;
+const QuoteAuthorName = styled.div`font-size: 0.9rem;`;
 
 const QuoteAuthorPosition = styled.div`
   font-size: 0.8rem;
@@ -40,9 +36,15 @@ const QuoteAuthorPosition = styled.div`
 
 const Quote = ({ author, position, children }) =>
   (<QuoteBlock>
-    <QuoteText>{children}</QuoteText>
-    <QuoteAuthorName>{author}</QuoteAuthorName>
-    <QuoteAuthorPosition>{position}</QuoteAuthorPosition>
+    <QuoteText>
+      {children}
+    </QuoteText>
+    <QuoteAuthorName>
+      {author}
+    </QuoteAuthorName>
+    <QuoteAuthorPosition>
+      {position}
+    </QuoteAuthorPosition>
   </QuoteBlock>);
 
 Quote.propTypes = {

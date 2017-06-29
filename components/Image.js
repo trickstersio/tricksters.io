@@ -23,7 +23,12 @@ const Image = styled.img`
 `;
 
 const ImageComponent = ({ src, caption }) =>
-  <Figure><Image src={src} /><FigureCaption>{caption}</FigureCaption></Figure>;
+  (<Figure>
+    <Image src={src} />
+    <FigureCaption>
+      {caption}
+    </FigureCaption>
+  </Figure>);
 
 ImageComponent.propTypes = {
   src: PropTypes.string.isRequired,
