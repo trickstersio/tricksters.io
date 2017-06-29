@@ -15,7 +15,7 @@
     "dev": "next",
     "build": "npm run clean && next build",
     "prestart": "npm run build",
-    "start": "next start",
+    "start": "NODE_ENV=production next start",
     "clean": "rm -fr .next"
   },
   "dependencies": {
