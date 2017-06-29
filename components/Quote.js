@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { accentColor } from '../lib/colors';
-import { headingFont } from '../lib/fonts';
-import media from '../lib/media';
+import media from '../utils/media';
 
 const QuoteBlock = styled.div`
   box-sizing: border-box;
   margin: 0 1.5em 2em 1.5em;
   padding: 0 1.5rem;
-  border-left: 1px solid ${accentColor};
+  border-left: 1px solid ${props => props.theme.colors.accent};
 
   ${media.tablet`
     margin: 0 auto 2em auto;
@@ -22,7 +20,7 @@ const QuoteBlock = styled.div`
 
 const QuoteText = styled.div`
   margin: 0 0 1em 0;
-  font-family: ${headingFont};
+  font-family: ${props => props.theme.fonts.heading};
   font-size: 1.3rem;
   font-style: italic;
 `;
@@ -31,7 +29,7 @@ const QuoteAuthorName = styled.div`font-size: 0.9rem;`;
 
 const QuoteAuthorPosition = styled.div`
   font-size: 0.8rem;
-  opacity: 0.5;
+  color: ${props => props.theme.colors.secondary};
 `;
 
 const Quote = ({ author, position, children }) =>

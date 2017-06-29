@@ -31,7 +31,7 @@ const PostAuthorName = styled.div`font-size: 0.9rem;`;
 
 const PostAuthorPosition = styled.div`
   font-size: 0.8rem;
-  opacity: 0.5;
+  color: ${props => props.theme.colors.secondary};
 `;
 
 const PostAuthor = ({ src, author, position }) =>

@@ -1,7 +1,7 @@
+import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
-import { bodyFont } from '../lib/fonts';
-import { textColor } from '../lib/colors';
+import theme from '../utils/theme';
 
 const globalStyles = `
   @font-face {
@@ -62,11 +62,12 @@ const globalStyles = `
   html, body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: ${bodyFont};
+    font-family: ${theme.fonts.body};
     font-style: normal;
     padding: 0;
     margin: 0;
-    color: ${textColor};
+    color: ${theme.colors.text};
+    background-color: ${theme.colors.background};
 
     -webkit-font-smoothing: subpixel-antialiased;
   }

@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Highlight from 'react-highlight';
 import styled from 'styled-components';
-import { accentColor } from '../lib/colors';
-import { monospaceFont } from '../lib/fonts';
-import media from '../lib/media';
+import media from '../utils/media';
 
 const CodeWrapper = styled.div`
   display: flex;
@@ -13,8 +11,8 @@ const CodeWrapper = styled.div`
   box-sizing: border-box;
   margin: 0 1.5em 2em 1.5em;
 
-  background-color: #f7f7f7;
-  border-left: 1px solid ${accentColor};
+  background-color: ${props => props.theme.colors.codeBackground};
+  border-left: 1px solid ${props => props.theme.colors.accent};
 
   overflow-x: hidden;
 
@@ -34,11 +32,11 @@ const LineNumbersContainer = styled.div`
   padding: 1rem 0 1rem 1.5rem;
   margin: 0;
 
-  font-family: ${monospaceFont};
+  font-family: ${props => props.theme.fonts.monospace};
   font-size: 0.9rem;
   line-height: 1.5;
 
-  opacity: 0.5;
+  color: ${props => props.theme.colors.secondary};
 `;
 
 const CodeBlockContainer = styled.div`
@@ -54,7 +52,7 @@ const CodeBlock = styled(Highlight)`
   padding: 1rem;
   margin: 0;
 
-  font-family: ${monospaceFont};
+  font-family: ${props => props.theme.fonts.monospace};
   font-size: 0.9rem;
   line-height: 1.5;
 `;

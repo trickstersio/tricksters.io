@@ -10,9 +10,9 @@ const Figure = styled.div`
 const FigureCaption = styled.span`
   display: block;
   font-size: 0.8rem;
-  opacity: 0.5;
   padding: 1em 1.5rem;
   text-align: center;
+  color: ${props => props.theme.colors.secondary};
 `;
 
 const Image = styled.img`

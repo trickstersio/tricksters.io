@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { accentColor } from '../../lib/colors';
 
 const ListItemText = styled.div`margin-left: 1.5em;`;
 
@@ -10,7 +9,7 @@ const ListItem = styled.li`
   position: relative;
 
   &::before {
-    color: ${accentColor};
+    color: ${props => props.theme.colors.accent};
     position: absolute;
   }
 `;

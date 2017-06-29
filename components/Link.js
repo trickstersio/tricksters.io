@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { accentColor } from '../lib/colors';
 
 const Link = styled.a`
-  color: ${accentColor};
+  color: ${props => props.theme.colors.accent};
   padding: 0;
 `;
 

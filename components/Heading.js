@@ -1,13 +1,10 @@
 import styled from 'styled-components';
-import { headingFont } from '../lib/fonts';
-import { textColor } from '../lib/colors';
-import media from '../lib/media';
+import media from '../utils/media';
 
 const Heading = styled.h2`
-  font-family: ${headingFont};
+  font-family: ${props => props.theme.fonts.heading};
   font-weight: 700;
   font-size: 1.3rem;
-  color: ${textColor};
   box-sizing: border-box;
   text-align: left;
   padding: 0 1.5rem;

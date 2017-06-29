@@ -1,14 +1,11 @@
 import styled from 'styled-components';
-import { headingFont } from '../../lib/fonts';
-import { textColor } from '../../lib/colors';
-import media from '../../lib/media';
+import media from '../../utils/media';
 
 const PostTitle = styled.h1`
-  font-family: ${headingFont};
+  font-family: ${props => props.theme.fonts.heading};
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.3;
-  color: ${textColor};
   box-sizing: border-box;
   text-align: center;
   padding: 0;

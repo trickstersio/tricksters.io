@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import media from '../../lib/media';
+import media from '../../utils/media';
 
 import PostDate from './PostDate';
 import PostTitle from './PostTitle';
@@ -18,12 +18,10 @@ const PostHeader = styled.div`
   ${media.tablet`
     margin: 0 0 2rem 0;
     padding: 0 2rem;
-  `}
-
-  ${media.desktop`
+  `} ${media.desktop`
     margin: 0 0 2rem 0;
     padding: 0 2rem;
-  `}
+  `};
 `;
 
 const PostHeaderComponent = (props) => {
@@ -31,8 +29,12 @@ const PostHeaderComponent = (props) => {
 
   return (
     <PostHeader>
-      <PostDate>{date}</PostDate>
-      <PostTitle>{title}</PostTitle>
+      <PostDate>
+        {date}
+      </PostDate>
+      <PostTitle>
+        {title}
+      </PostTitle>
       <PostAuthor src={photo} author={author} position={position} />
     </PostHeader>
   );

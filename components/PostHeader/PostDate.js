@@ -1,12 +1,7 @@
 import styled from 'styled-components';
-import { bodyFont } from '../../lib/fonts';
-import { textColor } from '../../lib/colors';
 
 const PostDate = styled.div`
-  font-family: ${bodyFont};
-  font-weight: 400;
   font-size: 0.8rem;
-  color: ${textColor};
   text-align: center;
   text-transform: uppercase;
   padding: 0;

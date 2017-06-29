@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from '../../lib/media';
+import media from '../../utils/media';
 
 const PostContent = styled.div`
   width: 100%;
