@@ -13,8 +13,10 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "build": "npm run clean && next build",
+    "prestart": "npm run build",
+    "start": "next start",
+    "clean": "rm -fr .next"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.1.5",
