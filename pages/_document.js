@@ -70,12 +70,6 @@ const globalStyles = `
 
     -webkit-font-smoothing: subpixel-antialiased;
   }
-
-  @media only screen and (max-width: 667px) {
-    html, body {
-      font-size: 14px;
-    }
-  }
 `;
 
 export default class MyDocument extends Document {
