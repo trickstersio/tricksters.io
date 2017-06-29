@@ -4,9 +4,7 @@ Site and blog of tricksters team.
 
 ## Installation
 
-With instruction uses `npm` as package manager, but [`yarn`](https://yarnpkg.com/en/) will also work.
-
-1.  Install [node](https://nodejs.org/en/).
+1.  Install [node](https://nodejs.org/en/) and [yarn](https://yarnpkg.com/en/).
 
 2.  Clone repo
 
@@ -17,23 +15,23 @@ With instruction uses `npm` as package manager, but [`yarn`](https://yarnpkg.com
 3.  Install dependencies
 
     ```bash
-    npm install --production
+    yarn install --production
     ```
 
 4.  Start local copy in `production` mode
 
     ```bash
-    npm start
+    yarn start
     ```
 
-    Application uses port 3000 by default. To use another port, you can run `npm start -- -p <your port here>`.
+    Application uses port 3000 by default. To use another port, you can run `yarn start -- -p <your port here>`.
 
-    Application is ready on [`http://localhost:3000`](http://localhost:3000).
+    Now application is ready on [`http://localhost:3000`](http://localhost:3000).
 
 ## Development
 
-1.  Install all dependencies with `npm install`.
+1.  Install all dependencies with `yarn install`.
 
-2.  Run dev server with `npm run dev` or `npm run dev -- -p <your port here>`.
+2.  Run dev server with `yarn dev` or `yarn dev -- -p <your port here>`.
 
-    Application is ready on [`http://localhost:3000`](http://localhost:3000).
+    Now application is ready on [`http://localhost:3000`](http://localhost:3000).
