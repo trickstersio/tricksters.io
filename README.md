@@ -35,3 +35,10 @@ Site and blog of tricksters team.
 2.  Run dev server with `yarn dev` or `yarn dev -- -p <your port here>`.
 
     Now application is ready on [`http://localhost:3000`](http://localhost:3000).
+
+## Docker
+
+```
+docker build -t trickstersio/trickstersio .
+docker run -d --rm --publish 7777:3000 --name trickstersio trickstersio/trickstersio
+```
