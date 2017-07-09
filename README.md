@@ -51,4 +51,4 @@ This project provides components browser powered by [Storybook](https://github.c
 
 2.  Run Storybook server with `yarn storybook`.
 
-    Storybook server should be available on [http://localhost:6006/](http://localhost:6006/).
+    Storybook server should be available on [`http://localhost:6006/`](http://localhost:6006/).
