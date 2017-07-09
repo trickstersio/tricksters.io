@@ -42,3 +42,13 @@ Site and blog of tricksters team.
 docker build -t trickstersio/trickstersio .
 docker run -d --rm --publish 7777:3000 --name trickstersio trickstersio/trickstersio
 ```
+
+## Storybook
+
+This project provides components browser powered by [Storybook](https://github.com/storybooks/storybook).
+
+1.  Install all dependencies with `yarn install`.
+
+2.  Run Storybook server with `yarn storybook`.
+
+    Storybook server should be available on [`http://localhost:6006/`](http://localhost:6006/).
