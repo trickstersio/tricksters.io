@@ -16,7 +16,9 @@
     "build": "npm run clean && next build",
     "prestart": "npm run build",
     "start": "NODE_ENV=production next start",
-    "clean": "rm -fr .next"
+    "clean": "rm -fr .next",
+    "storybook": "start-storybook -s . -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.1.5",
@@ -28,6 +30,9 @@
     "styled-components": "^2.1.0"
   },
   "devDependencies": {
+    "@storybook/addon-options": "^3.1.6",
+    "@storybook/cli": "^3.1.6",
+    "@storybook/react": "^3.1.8",
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
